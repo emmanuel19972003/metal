@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         -0.5,0.5,0,
          0,-0.5,0,
          0.5,0.5,0
-          
     ]
     
     var indices: [UInt16] = [
@@ -94,6 +93,25 @@ class ViewController: UIViewController {
             print("error es: \(error.localizedDescription)")
         }
     }
+    
+    private func buildPipeLineState2() {
+        let lib = device.makeDefaultLibrary()
+        let vertexFunc = lib?.makeFunction(name: "vertex_shader2")
+        let fragmentFunc = lib?.makeFunction(name: "fragment_shader2")
+        
+        let pipelineDescriptor = MTLRenderPipelineDescriptor()
+        pipelineDescriptor.vertexFunction = vertexFunc
+        pipelineDescriptor.fragmentFunction = fragmentFunc
+        pipelineDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm_srgb
+        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
+        
+        do {
+            pipeLineState = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
+        } catch let error as NSError {
+            print("error es: \(error.localizedDescription)")
+        }
+    }
+    
 }
 
 extension ViewController: MTKViewDelegate {
@@ -127,11 +145,18 @@ extension ViewController: MTKViewDelegate {
         commandEncoder?.setFragmentBytes(&constants,
                                          length: MemoryLayout<Constant>.stride,
                                          index: 0)
+
+        commandEncoder?.drawIndexedPrimitives(type: .triangle,
+                                              indexCount: indices.count,
+                                              indexType: .uint16,
+                                              indexBuffer: indexBuffer,
+                                              indexBufferOffset: 0)
+        
+
         
         commandEncoder?.endEncoding()
         commandBuffer?.present(drawable)
         commandBuffer?.commit()
-
     }
 }
 
