@@ -16,26 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dry-dB-jNB">
+                                <rect key="frame" x="10" y="59" width="373" height="32"/>
+                                <segments>
+                                    <segment title="rotations"/>
+                                    <segment title="fall"/>
+                                    <segment title="sub"/>
+                                    <segment title="color Plane"/>
+                                </segments>
+                            </segmentedControl>
                             <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-kq-8yY">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="90" width="393" height="728"/>
                             </mtkView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FzP-kq-8yY" secondAttribute="bottom" id="2Tv-iX-d1R"/>
-                            <constraint firstItem="FzP-kq-8yY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GMR-pR-LoQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FzP-kq-8yY" secondAttribute="trailing" id="NPi-SR-Rs4"/>
-                            <constraint firstItem="FzP-kq-8yY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sAt-BM-WJh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FzP-kq-8yY" secondAttribute="trailing" id="6ff-gq-ZvX"/>
+                            <constraint firstItem="FzP-kq-8yY" firstAttribute="top" secondItem="Dry-dB-jNB" secondAttribute="bottom" id="HxA-jg-iSt"/>
+                            <constraint firstItem="Dry-dB-jNB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Iua-oD-HAG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FzP-kq-8yY" secondAttribute="bottom" id="e5t-yx-PoK"/>
+                            <constraint firstItem="FzP-kq-8yY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gFz-yI-gk7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dry-dB-jNB" secondAttribute="trailing" constant="10" id="hCu-Ug-Tzv"/>
+                            <constraint firstItem="Dry-dB-jNB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jjL-lI-jDu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="metalView" destination="FzP-kq-8yY" id="Q1X-pQ-Lyh"/>
+                        <outlet property="metalView" destination="FzP-kq-8yY" id="pzN-uq-wcb"/>
+                        <outlet property="segmentControl" destination="Dry-dB-jNB" id="MpG-su-zqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
