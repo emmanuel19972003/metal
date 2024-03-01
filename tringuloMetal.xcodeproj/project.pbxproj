@@ -22,6 +22,7 @@
 		67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885D2B6C932000EFF5C1 /* trianguloCruculos.swift */; };
 		67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885F2B6C9B1B00EFF5C1 /* subamortiguado.swift */; };
 		67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7D3A92B708B6500987072 /* ColorPlane.swift */; };
+		9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		67A3885D2B6C932000EFF5C1 /* trianguloCruculos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trianguloCruculos.swift; sourceTree = "<group>"; };
 		67A3885F2B6C9B1B00EFF5C1 /* subamortiguado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subamortiguado.swift; sourceTree = "<group>"; };
 		67F7D3A92B708B6500987072 /* ColorPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPlane.swift; sourceTree = "<group>"; };
+		9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,8 @@
 		672F24132B6739930032D01B = {
 			isa = PBXGroup;
 			children = (
+				9FB1AC2A2B922AC500244EE3 /* teaPot */,
+				9FB1AC292B922AA200244EE3 /* proyect */,
 				672F241E2B6739930032D01B /* tringuloMetal */,
 				672F24352B6739940032D01B /* tringuloMetalTests */,
 				672F243F2B6739940032D01B /* tringuloMetalUITests */,
@@ -111,8 +115,6 @@
 		672F241E2B6739930032D01B /* tringuloMetal */ = {
 			isa = PBXGroup;
 			children = (
-				672F241F2B6739930032D01B /* AppDelegate.swift */,
-				672F24212B6739930032D01B /* SceneDelegate.swift */,
 				672F24232B6739930032D01B /* ViewController.swift */,
 				67A3885B2B6C897600EFF5C1 /* metaStructures.swift */,
 				67A388592B6C895400EFF5C1 /* tiroParabolico.swift */,
@@ -121,9 +123,7 @@
 				67F7D3A92B708B6500987072 /* ColorPlane.swift */,
 				673161112B69EA91004EC08A /* Shader.metal */,
 				672F24252B6739930032D01B /* Main.storyboard */,
-				672F24282B6739940032D01B /* Assets.xcassets */,
 				672F242A2B6739940032D01B /* LaunchScreen.storyboard */,
-				672F242D2B6739940032D01B /* Info.plist */,
 			);
 			path = tringuloMetal;
 			sourceTree = "<group>";
@@ -143,6 +143,25 @@
 				672F24422B6739940032D01B /* tringuloMetalUITestsLaunchTests.swift */,
 			);
 			path = tringuloMetalUITests;
+			sourceTree = "<group>";
+		};
+		9FB1AC292B922AA200244EE3 /* proyect */ = {
+			isa = PBXGroup;
+			children = (
+				672F242D2B6739940032D01B /* Info.plist */,
+				672F24282B6739940032D01B /* Assets.xcassets */,
+				672F24212B6739930032D01B /* SceneDelegate.swift */,
+				672F241F2B6739930032D01B /* AppDelegate.swift */,
+			);
+			path = proyect;
+			sourceTree = "<group>";
+		};
+		9FB1AC2A2B922AC500244EE3 /* teaPot */ = {
+			isa = PBXGroup;
+			children = (
+				9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */,
+			);
+			path = teaPot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				673161122B69EA91004EC08A /* Shader.metal in Sources */,
+				9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */,
 				67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */,
 				672F24242B6739930032D01B /* ViewController.swift in Sources */,
 				67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */,
