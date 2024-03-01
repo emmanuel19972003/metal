@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				9FB1AC2A2B922AC500244EE3 /* teaPot */,
-				9FB1AC292B922AA200244EE3 /* proyect */,
 				672F241E2B6739930032D01B /* tringuloMetal */,
 				672F24352B6739940032D01B /* tringuloMetalTests */,
 				672F243F2B6739940032D01B /* tringuloMetalUITests */,
@@ -115,6 +114,10 @@
 		672F241E2B6739930032D01B /* tringuloMetal */ = {
 			isa = PBXGroup;
 			children = (
+				672F242D2B6739940032D01B /* Info.plist */,
+				672F24282B6739940032D01B /* Assets.xcassets */,
+				672F24212B6739930032D01B /* SceneDelegate.swift */,
+				672F241F2B6739930032D01B /* AppDelegate.swift */,
 				672F24232B6739930032D01B /* ViewController.swift */,
 				67A3885B2B6C897600EFF5C1 /* metaStructures.swift */,
 				67A388592B6C895400EFF5C1 /* tiroParabolico.swift */,
@@ -143,17 +146,6 @@
 				672F24422B6739940032D01B /* tringuloMetalUITestsLaunchTests.swift */,
 			);
 			path = tringuloMetalUITests;
-			sourceTree = "<group>";
-		};
-		9FB1AC292B922AA200244EE3 /* proyect */ = {
-			isa = PBXGroup;
-			children = (
-				672F242D2B6739940032D01B /* Info.plist */,
-				672F24282B6739940032D01B /* Assets.xcassets */,
-				672F24212B6739930032D01B /* SceneDelegate.swift */,
-				672F241F2B6739930032D01B /* AppDelegate.swift */,
-			);
-			path = proyect;
 			sourceTree = "<group>";
 		};
 		9FB1AC2A2B922AC500244EE3 /* teaPot */ = {
