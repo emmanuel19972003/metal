@@ -22,6 +22,10 @@
 		67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885D2B6C932000EFF5C1 /* trianguloCruculos.swift */; };
 		67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885F2B6C9B1B00EFF5C1 /* subamortiguado.swift */; };
 		67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7D3A92B708B6500987072 /* ColorPlane.swift */; };
+		9F208A862B96020C007E6E4F /* wt_teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F208A852B96020C007E6E4F /* wt_teapot.obj */; };
+		9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC015F2B9608A500A75C1B /* TealPodModel.swift */; };
+		9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */; };
+		9FAC01642B97556B00A75C1B /* teaPod.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC01632B97556B00A75C1B /* teaPod.metal */; };
 		9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		67A3885D2B6C932000EFF5C1 /* trianguloCruculos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trianguloCruculos.swift; sourceTree = "<group>"; };
 		67A3885F2B6C9B1B00EFF5C1 /* subamortiguado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subamortiguado.swift; sourceTree = "<group>"; };
 		67F7D3A92B708B6500987072 /* ColorPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPlane.swift; sourceTree = "<group>"; };
+		9F208A852B96020C007E6E4F /* wt_teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wt_teapot.obj; sourceTree = "<group>"; };
+		9FAC015F2B9608A500A75C1B /* TealPodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TealPodModel.swift; sourceTree = "<group>"; };
+		9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodStrcutures.swift; sourceTree = "<group>"; };
+		9FAC01632B97556B00A75C1B /* teaPod.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = teaPod.metal; sourceTree = "<group>"; };
 		9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */,
+				9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */,
+				9FAC015F2B9608A500A75C1B /* TealPodModel.swift */,
+				9FAC01632B97556B00A75C1B /* teaPod.metal */,
+				9F208A852B96020C007E6E4F /* wt_teapot.obj */,
 			);
 			path = teaPot;
 			sourceTree = "<group>";
@@ -261,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				672F242C2B6739940032D01B /* LaunchScreen.storyboard in Resources */,
+				9F208A862B96020C007E6E4F /* wt_teapot.obj in Resources */,
 				672F24292B6739940032D01B /* Assets.xcassets in Resources */,
 				672F24272B6739930032D01B /* Main.storyboard in Resources */,
 			);
@@ -287,15 +300,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAC01642B97556B00A75C1B /* teaPod.metal in Sources */,
 				673161122B69EA91004EC08A /* Shader.metal in Sources */,
 				9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */,
 				67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */,
 				672F24242B6739930032D01B /* ViewController.swift in Sources */,
 				67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */,
+				9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */,
 				67A3885C2B6C897600EFF5C1 /* metaStructures.swift in Sources */,
 				672F24202B6739930032D01B /* AppDelegate.swift in Sources */,
 				67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */,
 				67A3885A2B6C895400EFF5C1 /* tiroParabolico.swift in Sources */,
+				9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */,
 				672F24222B6739930032D01B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
