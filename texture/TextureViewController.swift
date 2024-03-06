@@ -1,5 +1,5 @@
 //
-//  teaPodViewController.swift
+//  TextureViewController.swift
 //  tringuloMetal
 //
 //  Created by Emmanuel Zambrano on 1/03/24.
@@ -8,7 +8,7 @@
 import UIKit
 import MetalKit
 
-class teaPodViewController: UIViewController {
+class TextureViewController: UIViewController {
     
     var device: MTLDevice?
     var model: MTKViewDelegate?
@@ -53,9 +53,11 @@ class teaPodViewController: UIViewController {
         
         metalView.clearColor = Colors.green
         
-        model = TealPodModel(device: device)
+        model = TextureModel(device: device)
         
         metalView.delegate = model
     }
 
 }
+
+

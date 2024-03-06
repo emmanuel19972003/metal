@@ -17,6 +17,9 @@
 		672F24412B6739940032D01B /* tringuloMetalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F24402B6739940032D01B /* tringuloMetalUITests.swift */; };
 		672F24432B6739940032D01B /* tringuloMetalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F24422B6739940032D01B /* tringuloMetalUITestsLaunchTests.swift */; };
 		673161122B69EA91004EC08A /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 673161112B69EA91004EC08A /* Shader.metal */; };
+		674CB43E2B9809C6007A9747 /* TextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674CB43D2B9809C6007A9747 /* TextureViewController.swift */; };
+		674CB4402B9809EB007A9747 /* TextureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674CB43F2B9809EB007A9747 /* TextureModel.swift */; };
+		674CB4422B981303007A9747 /* TextureShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 674CB4412B981303007A9747 /* TextureShaders.metal */; };
 		67A3885A2B6C895400EFF5C1 /* tiroParabolico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A388592B6C895400EFF5C1 /* tiroParabolico.swift */; };
 		67A3885C2B6C897600EFF5C1 /* metaStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885B2B6C897600EFF5C1 /* metaStructures.swift */; };
 		67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885D2B6C932000EFF5C1 /* trianguloCruculos.swift */; };
@@ -61,6 +64,9 @@
 		672F24402B6739940032D01B /* tringuloMetalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tringuloMetalUITests.swift; sourceTree = "<group>"; };
 		672F24422B6739940032D01B /* tringuloMetalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tringuloMetalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		673161112B69EA91004EC08A /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		674CB43D2B9809C6007A9747 /* TextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureViewController.swift; sourceTree = "<group>"; };
+		674CB43F2B9809EB007A9747 /* TextureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureModel.swift; sourceTree = "<group>"; };
+		674CB4412B981303007A9747 /* TextureShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TextureShaders.metal; sourceTree = "<group>"; };
 		67A388592B6C895400EFF5C1 /* tiroParabolico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiroParabolico.swift; sourceTree = "<group>"; };
 		67A3885B2B6C897600EFF5C1 /* metaStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metaStructures.swift; sourceTree = "<group>"; };
 		67A3885D2B6C932000EFF5C1 /* trianguloCruculos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trianguloCruculos.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		672F24132B6739930032D01B = {
 			isa = PBXGroup;
 			children = (
+				674CB43C2B9809B1007A9747 /* texture */,
 				9FB1AC2A2B922AC500244EE3 /* teaPot */,
 				672F241E2B6739930032D01B /* tringuloMetal */,
 				672F24352B6739940032D01B /* tringuloMetalTests */,
@@ -154,6 +161,16 @@
 				672F24422B6739940032D01B /* tringuloMetalUITestsLaunchTests.swift */,
 			);
 			path = tringuloMetalUITests;
+			sourceTree = "<group>";
+		};
+		674CB43C2B9809B1007A9747 /* texture */ = {
+			isa = PBXGroup;
+			children = (
+				674CB43D2B9809C6007A9747 /* TextureViewController.swift */,
+				674CB43F2B9809EB007A9747 /* TextureModel.swift */,
+				674CB4412B981303007A9747 /* TextureShaders.metal */,
+			);
+			path = texture;
 			sourceTree = "<group>";
 		};
 		9FB1AC2A2B922AC500244EE3 /* teaPot */ = {
@@ -300,15 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674CB4422B981303007A9747 /* TextureShaders.metal in Sources */,
 				9FAC01642B97556B00A75C1B /* teaPod.metal in Sources */,
 				673161122B69EA91004EC08A /* Shader.metal in Sources */,
 				9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */,
 				67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */,
 				672F24242B6739930032D01B /* ViewController.swift in Sources */,
 				67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */,
+				674CB43E2B9809C6007A9747 /* TextureViewController.swift in Sources */,
 				9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */,
 				67A3885C2B6C897600EFF5C1 /* metaStructures.swift in Sources */,
 				672F24202B6739930032D01B /* AppDelegate.swift in Sources */,
+				674CB4402B9809EB007A9747 /* TextureModel.swift in Sources */,
 				67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */,
 				67A3885A2B6C895400EFF5C1 /* tiroParabolico.swift in Sources */,
 				9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */,
