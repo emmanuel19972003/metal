@@ -15,7 +15,34 @@ struct TextureVertex {
     let texture: SIMD2<Float>
 }
 
-class TextureModel: NSObject {
+protocol Texturable {
+    var texture: MTLTexture? {get set}
+}
+
+extension Texturable {
+    func setTexture(device: MTLDevice, imageName: String) -> MTLTexture? {
+        let textureLoader = MTKTextureLoader(device: device)
+        
+        var texture: MTLTexture? = nil
+        
+        let textureLoaderOptions: [MTKTextureLoader.Option : Any]
+        
+        
+        textureLoaderOptions =
+        [MTKTextureLoader.Option.origin : MTKTextureLoader.Origin.bottomLeft]
+        
+        if let textureURL = Bundle.main.url(forResource: imageName, withExtension: "jpg") {
+            do {
+                texture = try textureLoader.newTexture(URL: textureURL, options: textureLoaderOptions)
+            } catch {
+                fatalError("llorelo")
+            }
+        }
+        return texture
+    }
+}
+
+class TextureModel: NSObject, Texturable {
     
     var device: MTLDevice
     
@@ -25,20 +52,22 @@ class TextureModel: NSObject {
     var vertexBuffer: MTLBuffer?
     var indexBuffer: MTLBuffer?
     
+    var texture: MTLTexture?
+    
     
     var vertex: [TextureVertex] = [
-        TextureVertex(vertex: SIMD3<Float>(-1,1,0),
+        TextureVertex(vertex: SIMD3<Float>(-1,1,0), //v0
                       color: SIMD4<Float>(1,0,0,1),
                       texture: SIMD2<Float>(0,1)),
-        TextureVertex(vertex:SIMD3<Float>(-1,-1,0),
+        TextureVertex(vertex:SIMD3<Float>(-1,-1,0), //v1
                       color: SIMD4<Float>(0,1,0,1),
                       texture: SIMD2<Float>(0,0)),
-        TextureVertex(vertex: SIMD3<Float>(1,-1,0),
+        TextureVertex(vertex: SIMD3<Float>(1,-1,0), //v2
                       color: SIMD4<Float>(0,0,1,1),
-                      texture: SIMD2<Float>(1,1)),
-        TextureVertex(vertex: SIMD3<Float>(1,1,0),
+                      texture: SIMD2<Float>(1,0)),
+        TextureVertex(vertex: SIMD3<Float>(1,1,0), //v3
                       color: SIMD4<Float>(1,0,1,1),
-                      texture: SIMD2<Float>(1,0))
+                      texture: SIMD2<Float>(1,1))
         
         
         
@@ -49,10 +78,11 @@ class TextureModel: NSObject {
         2,3,0
     ]
     
-    init(device: MTLDevice) {
+    init(device: MTLDevice, imageName: String) {
         self.device = device
         self.commandQueue = device.makeCommandQueue()!
         super.init()
+        self.texture = setTexture(device: device, imageName: imageName)
         setBuffers()
         setPipelineState()
     }
@@ -71,7 +101,7 @@ class TextureModel: NSObject {
         
         let lib = device.makeDefaultLibrary()
         let vertexFunc = lib?.makeFunction(name: "vertex_shader_texture")
-        let fragmentFunc = lib?.makeFunction(name: "fragment_shader_texture")
+        let fragmentFunc = lib?.makeFunction(name: "texture_fragment")
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunc
@@ -129,6 +159,8 @@ extension TextureModel: MTKViewDelegate {
         commandEncoder?.setRenderPipelineState(pipeLineState)
         
         commandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+        
+        commandEncoder?.setFragmentTexture(texture, index: 0)
         
         commandEncoder?.drawIndexedPrimitives(type: .triangle,
                                               indexCount: indices.count,

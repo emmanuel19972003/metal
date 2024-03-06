@@ -9,7 +9,6 @@ import Foundation
 import Metal
 import MetalKit
 
-
 class TealPodModel: NSObject {
     
     var device: MTLDevice // mi GPU
@@ -18,6 +17,8 @@ class TealPodModel: NSObject {
     var pipeLineState: MTLRenderPipelineState?
     var vertexBuffer: MTLBuffer?
     var indexBuffer: MTLBuffer?
+    
+    var texture: MTLTexture?
     
     let vertex: [colorVertex] = [
         colorVertex(position: SIMD3<Float>(0.0, 0.5, 0),

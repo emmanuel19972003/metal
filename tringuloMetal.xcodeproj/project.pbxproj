@@ -29,6 +29,11 @@
 		9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC015F2B9608A500A75C1B /* TealPodModel.swift */; };
 		9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */; };
 		9FAC01642B97556B00A75C1B /* teaPod.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC01632B97556B00A75C1B /* teaPod.metal */; };
+		9FAC01662B98B64D00A75C1B /* ligth.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC01652B98B64D00A75C1B /* ligth.jpeg */; };
+		9FAC01682B98BBD600A75C1B /* why.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC01672B98BBD600A75C1B /* why.jpg */; };
+		9FAC016A2B98BD0600A75C1B /* Purplecolor.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC01692B98BD0600A75C1B /* Purplecolor.JPG */; };
+		9FAC016C2B98BDAE00A75C1B /* color.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC016B2B98BDAE00A75C1B /* color.jpg */; };
+		9FAC016E2B98C15700A75C1B /* sim.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC016D2B98C15700A75C1B /* sim.png */; };
 		9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +81,11 @@
 		9FAC015F2B9608A500A75C1B /* TealPodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TealPodModel.swift; sourceTree = "<group>"; };
 		9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodStrcutures.swift; sourceTree = "<group>"; };
 		9FAC01632B97556B00A75C1B /* teaPod.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = teaPod.metal; sourceTree = "<group>"; };
+		9FAC01652B98B64D00A75C1B /* ligth.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ligth.jpeg; sourceTree = SOURCE_ROOT; };
+		9FAC01672B98BBD600A75C1B /* why.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = why.jpg; sourceTree = SOURCE_ROOT; };
+		9FAC01692B98BD0600A75C1B /* Purplecolor.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Purplecolor.JPG; sourceTree = SOURCE_ROOT; };
+		9FAC016B2B98BDAE00A75C1B /* color.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = color.jpg; sourceTree = SOURCE_ROOT; };
+		9FAC016D2B98C15700A75C1B /* sim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sim.png; sourceTree = SOURCE_ROOT; };
 		9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +179,11 @@
 				674CB43D2B9809C6007A9747 /* TextureViewController.swift */,
 				674CB43F2B9809EB007A9747 /* TextureModel.swift */,
 				674CB4412B981303007A9747 /* TextureShaders.metal */,
+				9FAC01652B98B64D00A75C1B /* ligth.jpeg */,
+				9FAC01672B98BBD600A75C1B /* why.jpg */,
+				9FAC01692B98BD0600A75C1B /* Purplecolor.JPG */,
+				9FAC016B2B98BDAE00A75C1B /* color.jpg */,
+				9FAC016D2B98C15700A75C1B /* sim.png */,
 			);
 			path = texture;
 			sourceTree = "<group>";
@@ -289,10 +304,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAC01682B98BBD600A75C1B /* why.jpg in Resources */,
 				672F242C2B6739940032D01B /* LaunchScreen.storyboard in Resources */,
+				9FAC016A2B98BD0600A75C1B /* Purplecolor.JPG in Resources */,
+				9FAC016E2B98C15700A75C1B /* sim.png in Resources */,
 				9F208A862B96020C007E6E4F /* wt_teapot.obj in Resources */,
 				672F24292B6739940032D01B /* Assets.xcassets in Resources */,
 				672F24272B6739930032D01B /* Main.storyboard in Resources */,
+				9FAC01662B98B64D00A75C1B /* ligth.jpeg in Resources */,
+				9FAC016C2B98BDAE00A75C1B /* color.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

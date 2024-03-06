@@ -8,6 +8,7 @@
 import UIKit
 import MetalKit
 
+
 class TextureViewController: UIViewController {
     
     var device: MTLDevice?
@@ -53,7 +54,7 @@ class TextureViewController: UIViewController {
         
         metalView.clearColor = Colors.green
         
-        model = TextureModel(device: device)
+        model = TextureModel(device: device, imageName: "color")
         
         metalView.delegate = model
     }
