@@ -33,8 +33,26 @@ fragment half4 texture_fragment(VertexOutTexture vertexIn [[stage_in]],
                                 texture2d<float> texture [[texture(0)]]) {
     constexpr sampler defaultSampler;
     float4 color = texture.sample(defaultSampler, vertexIn.textureCoordinates);
-    if (color.r > color.g && color.r > color.b) {
-        return half4(color.r, color.r, color.r, 1);
+    float greenColor = float(230)/255;
+    if (color.g > greenColor) {
+        return half4(vertexIn.color);
+    }
+    return half4(color.r, color.g, color.b, 1);
+    
+}
+
+fragment half4 replace_back_ground(VertexOutTexture vertexIn [[stage_in]],
+                                texture2d<float> texture [[texture(0)]],
+                                   texture2d<float> texture2 [[texture(1)]],
+                                   sampler sampler2d [[sampler(0)]]) {
+//    constexpr sampler defaultSampler;
+//    float4 color = texture.sample(defaultSampler, vertexIn.textureCoordinates);
+//    float4 backGroundColor = texture2.sample(defaultSampler, vertexIn.textureCoordinates);
+    float4 color = texture.sample(sampler2d, vertexIn.textureCoordinates);
+    float4 backGroundColor = texture2.sample(sampler2d, vertexIn.textureCoordinates);
+    float greenColor = float(230)/255;
+    if (color.g > greenColor) {
+        return half4(backGroundColor.r, backGroundColor.g, backGroundColor.b, 1);
     }
     return half4(color.r, color.g, color.b, 1);
     

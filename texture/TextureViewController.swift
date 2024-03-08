@@ -54,7 +54,7 @@ class TextureViewController: UIViewController {
         
         metalView.clearColor = Colors.green
         
-        model = TextureModel(device: device, imageName: "color")
+        model = backgroundFilterModel(device: device, imageName: "greenScreen", background: "ladScape")
         
         metalView.delegate = model
     }

@@ -1,21 +1,15 @@
 //
-//  TextureModel.swift
+//  backgroundFilterModel.swift
 //  tringuloMetal
 //
-//  Created by Emmanuel Zambrano Quitian on 3/5/24.
+//  Created by Emmanuel Zambrano on 7/03/24.
 //
 
 import Foundation
-import Metal
 import MetalKit
 
-struct TextureVertex {
-    let vertex: SIMD3<Float>
-    let color: SIMD4<Float>
-    let texture: SIMD2<Float>
-}
 
-class TextureModel: NSObject, Texturable {
+class backgroundFilterModel: NSObject, Texturable {
     
     var device: MTLDevice
     
@@ -26,6 +20,9 @@ class TextureModel: NSObject, Texturable {
     var indexBuffer: MTLBuffer?
     
     var texture: MTLTexture?
+    var samplerSate: MTLSamplerState?
+    
+    var background: MTLTexture?
     
     
     var vertex: [TextureVertex] = [
@@ -51,13 +48,22 @@ class TextureModel: NSObject, Texturable {
         2,3,0
     ]
     
-    init(device: MTLDevice, imageName: String) {
+    init(device: MTLDevice, imageName: String, background: String) {
         self.device = device
         self.commandQueue = device.makeCommandQueue()!
         super.init()
-        self.texture = setTexture(device: device, imageName: imageName, format: .jpg)
+        self.texture = setTexture(device: device, imageName: imageName)
+        self.background = setTexture(device: device, imageName: background)
         setBuffers()
         setPipelineState()
+        setSampleSampleSate()
+    }
+    
+    private func setSampleSampleSate() {
+        let descriptor = MTLSamplerDescriptor()
+        descriptor.minFilter = .linear
+        descriptor.magFilter = .linear
+        samplerSate = device.makeSamplerState(descriptor: descriptor)
     }
     
     private func setBuffers() {
@@ -74,7 +80,7 @@ class TextureModel: NSObject, Texturable {
         
         let lib = device.makeDefaultLibrary()
         let vertexFunc = lib?.makeFunction(name: "vertex_shader_texture")
-        let fragmentFunc = lib?.makeFunction(name: "texture_fragment")
+        let fragmentFunc = lib?.makeFunction(name: "replace_back_ground")
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunc
@@ -90,11 +96,11 @@ class TextureModel: NSObject, Texturable {
         vertexDescriptor.attributes[0].bufferIndex = 0
         
         vertexDescriptor.attributes[1].format = .float4
-        vertexDescriptor.attributes[1].offset = MemoryLayout<float3>.stride
+        vertexDescriptor.attributes[1].offset = MemoryLayout<SIMD3<Float>>.stride
         vertexDescriptor.attributes[1].bufferIndex = 0
         
         vertexDescriptor.attributes[2].format = .float2
-        vertexDescriptor.attributes[2].offset = MemoryLayout<float3>.stride + MemoryLayout<float4>.stride
+        vertexDescriptor.attributes[2].offset = MemoryLayout<SIMD3<Float>>.stride + MemoryLayout<SIMD4<Float>>.stride
         vertexDescriptor.attributes[2].bufferIndex = 0
         
         
@@ -113,7 +119,7 @@ class TextureModel: NSObject, Texturable {
     
 }
 
-extension TextureModel: MTKViewDelegate {
+extension backgroundFilterModel: MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
     }
     
@@ -135,6 +141,10 @@ extension TextureModel: MTKViewDelegate {
         
         commandEncoder?.setFragmentTexture(texture, index: 0)
         
+        commandEncoder?.setFragmentTexture(background, index: 1)
+        
+        commandEncoder?.setFragmentSamplerState(samplerSate, index: 0)
+        
         commandEncoder?.drawIndexedPrimitives(type: .triangle,
                                               indexCount: indices.count,
                                               indexType: .uint16,
@@ -150,5 +160,6 @@ extension TextureModel: MTKViewDelegate {
         buffer?.commit()
     }
 }
+
 
 
