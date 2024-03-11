@@ -35,6 +35,13 @@
 		9FAC01762B9B5FBB00A75C1B /* greenScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC01752B9B5FBB00A75C1B /* greenScreen.jpg */; };
 		9FAC01782B9B6C4200A75C1B /* ladScape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FAC01772B9B6C4200A75C1B /* ladScape.jpg */; };
 		9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */; };
+		9FBE65562B9F544D002F71A1 /* Beautiful_landscape.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9FBE65542B9F544D002F71A1 /* Beautiful_landscape.JPG */; };
+		9FBE65572B9F544D002F71A1 /* pexels-james-wheeler-417074.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FBE65552B9F544D002F71A1 /* pexels-james-wheeler-417074.jpg */; };
+		9FBE655A2B9F5F85002F71A1 /* videoEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE65592B9F5F85002F71A1 /* videoEViewController.swift */; };
+		9FBE655C2B9F6038002F71A1 /* planeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE655B2B9F6038002F71A1 /* planeRenderer.swift */; };
+		9FBE655E2B9F6871002F71A1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE655D2B9F6871002F71A1 /* Node.swift */; };
+		9FBE65602B9F690B002F71A1 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE655F2B9F690B002F71A1 /* Plane.swift */; };
+		9FBE65622B9F6930002F71A1 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE65612B9F6930002F71A1 /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,13 @@
 		9FAC01752B9B5FBB00A75C1B /* greenScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = greenScreen.jpg; sourceTree = SOURCE_ROOT; };
 		9FAC01772B9B6C4200A75C1B /* ladScape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ladScape.jpg; sourceTree = SOURCE_ROOT; };
 		9FB1AC272B92278C00244EE3 /* teaPodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodViewController.swift; sourceTree = "<group>"; };
+		9FBE65542B9F544D002F71A1 /* Beautiful_landscape.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beautiful_landscape.JPG; sourceTree = SOURCE_ROOT; };
+		9FBE65552B9F544D002F71A1 /* pexels-james-wheeler-417074.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pexels-james-wheeler-417074.jpg"; sourceTree = SOURCE_ROOT; };
+		9FBE65592B9F5F85002F71A1 /* videoEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoEViewController.swift; sourceTree = "<group>"; };
+		9FBE655B2B9F6038002F71A1 /* planeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeRenderer.swift; sourceTree = "<group>"; };
+		9FBE655D2B9F6871002F71A1 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		9FBE655F2B9F690B002F71A1 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		9FBE65612B9F6930002F71A1 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,7 @@
 		672F24132B6739930032D01B = {
 			isa = PBXGroup;
 			children = (
+				9FBE65582B9F5F6B002F71A1 /* video2e */,
 				674CB43C2B9809B1007A9747 /* texture */,
 				9FB1AC2A2B922AC500244EE3 /* teaPot */,
 				672F241E2B6739930032D01B /* tringuloMetal */,
@@ -183,6 +198,8 @@
 				9FAC01772B9B6C4200A75C1B /* ladScape.jpg */,
 				9FAC016B2B98BDAE00A75C1B /* color.jpg */,
 				9FAC01752B9B5FBB00A75C1B /* greenScreen.jpg */,
+				9FBE65542B9F544D002F71A1 /* Beautiful_landscape.JPG */,
+				9FBE65552B9F544D002F71A1 /* pexels-james-wheeler-417074.jpg */,
 				9FAC01732B9A52C000A75C1B /* Texturable.swift */,
 			);
 			path = texture;
@@ -198,6 +215,18 @@
 				9F208A852B96020C007E6E4F /* wt_teapot.obj */,
 			);
 			path = teaPot;
+			sourceTree = "<group>";
+		};
+		9FBE65582B9F5F6B002F71A1 /* video2e */ = {
+			isa = PBXGroup;
+			children = (
+				9FBE65592B9F5F85002F71A1 /* videoEViewController.swift */,
+				9FBE655B2B9F6038002F71A1 /* planeRenderer.swift */,
+				9FBE655D2B9F6871002F71A1 /* Node.swift */,
+				9FBE655F2B9F690B002F71A1 /* Plane.swift */,
+				9FBE65612B9F6930002F71A1 /* Scene.swift */,
+			);
+			path = video2e;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,11 +334,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FAC01782B9B6C4200A75C1B /* ladScape.jpg in Resources */,
+				9FBE65562B9F544D002F71A1 /* Beautiful_landscape.JPG in Resources */,
 				672F242C2B6739940032D01B /* LaunchScreen.storyboard in Resources */,
 				9F208A862B96020C007E6E4F /* wt_teapot.obj in Resources */,
 				672F24292B6739940032D01B /* Assets.xcassets in Resources */,
 				672F24272B6739930032D01B /* Main.storyboard in Resources */,
 				9FAC016C2B98BDAE00A75C1B /* color.jpg in Resources */,
+				9FBE65572B9F544D002F71A1 /* pexels-james-wheeler-417074.jpg in Resources */,
 				9FAC01762B9B5FBB00A75C1B /* greenScreen.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,16 +372,21 @@
 				673161122B69EA91004EC08A /* Shader.metal in Sources */,
 				9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */,
 				67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */,
+				9FBE655E2B9F6871002F71A1 /* Node.swift in Sources */,
 				672F24242B6739930032D01B /* ViewController.swift in Sources */,
 				9FAC01742B9A52C000A75C1B /* Texturable.swift in Sources */,
+				9FBE655A2B9F5F85002F71A1 /* videoEViewController.swift in Sources */,
+				9FBE65602B9F690B002F71A1 /* Plane.swift in Sources */,
 				67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */,
 				674CB43E2B9809C6007A9747 /* TextureViewController.swift in Sources */,
 				9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */,
 				67A3885C2B6C897600EFF5C1 /* metaStructures.swift in Sources */,
+				9FBE655C2B9F6038002F71A1 /* planeRenderer.swift in Sources */,
 				672F24202B6739930032D01B /* AppDelegate.swift in Sources */,
 				674CB4402B9809EB007A9747 /* TextureModel.swift in Sources */,
 				67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */,
 				67A3885A2B6C895400EFF5C1 /* tiroParabolico.swift in Sources */,
+				9FBE65622B9F6930002F71A1 /* Scene.swift in Sources */,
 				9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */,
 				672F24222B6739930032D01B /* SceneDelegate.swift in Sources */,
 			);

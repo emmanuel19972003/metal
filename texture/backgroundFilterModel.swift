@@ -161,5 +161,10 @@ extension backgroundFilterModel: MTKViewDelegate {
     }
 }
 
+extension backgroundFilterModel {
+    func updateBackground(backGround: String, format: texturebaleFormat) {
+        background = setTexture(device: device, imageName: backGround, format: format)
+    }
+}
 
 

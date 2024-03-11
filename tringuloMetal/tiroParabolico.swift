@@ -51,7 +51,7 @@ class tiroParabolico: NSObject{
     
     private func buildPipeLineState() {
         let lib = device.makeDefaultLibrary()
-        let vertexFunc = lib?.makeFunction(name: "vertex_shader")
+        let vertexFunc = lib?.makeFunction(name: "vertex_shader_tiro_parabolico")
         let fragmentFunc = lib?.makeFunction(name: "fragment_shader")
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()

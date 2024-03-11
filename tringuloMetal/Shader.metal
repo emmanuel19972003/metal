@@ -12,8 +12,18 @@ struct Constant {
     float animateBy;
     float animateByY;
 };
-
+// constant que esta guardada en el device space, assigned en el buffer 0
 vertex float4 vertex_shader(const device packed_float3 *vertices [[buffer(0)]],
+                            constant Constant &constants [[buffer(1)]],
+                            uint vertexId [[vertex_id]]) {
+    float4 pos = float4(vertices[vertexId], 1);
+    pos.x += constants.animateBy;
+    pos.y += constants.animateByY;
+    return pos;
+//    return float4(vertices[vertexId], 1);
+}
+
+vertex float4 vertex_shader_tiro_parabolico(const device packed_float3 *vertices [[buffer(0)]],
                             constant Constant &constants [[buffer(1)]],
                             uint vertexId [[vertex_id]]) {
     float4 pos = float4(vertices[vertexId], 1);

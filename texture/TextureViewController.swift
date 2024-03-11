@@ -19,10 +19,21 @@ class TextureViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    lazy var butonBackGround: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("cahgen chavground", for: .normal)
+        view.addTarget(self, action: #selector(buttonTaped), for: .touchUpInside)
+        view.backgroundColor = .white
+        view.setTitleColor(.black, for: .normal)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addMTKView()
+        addButton()
         setModel()
     }
     
@@ -35,6 +46,16 @@ class TextureViewController: UIViewController {
             metalView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             metalView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             metalView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func addButton() {
+        view.addSubview(butonBackGround)
+        NSLayoutConstraint.activate([
+            butonBackGround.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            butonBackGround.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            butonBackGround.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            butonBackGround.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
     
@@ -57,6 +78,18 @@ class TextureViewController: UIViewController {
         model = backgroundFilterModel(device: device, imageName: "greenScreen", background: "ladScape")
         
         metalView.delegate = model
+    }
+    
+    @objc func buttonTaped() {
+        guard let model = model as? backgroundFilterModel else {
+             return
+        }
+        
+        let random = Int.random(in: 0...2)
+        let backgrounds = ["ladScape", "color", "Beautiful_landscape", "pexels-james-wheeler-417074"]
+        let formats: [texturebaleFormat] = [.jpg, .jpg, .JPG, .jpg]
+        
+        model.updateBackground(backGround: backgrounds[random], format: formats[random])
     }
 
 }
