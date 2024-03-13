@@ -7,10 +7,18 @@
 
 import MetalKit
 
-class Node {
+class Node {//esto podría ser un protocolo
+    
+    
     var children: [Node] = []
     
     func addChil(child: Node) {
         children.append(child)
+    }
+    
+    func render(commandEncoder: MTLRenderCommandEncoder) {
+        for child in children {
+            child.render(commandEncoder: commandEncoder)
+        }
     }
 }

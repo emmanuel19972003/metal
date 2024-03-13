@@ -26,6 +26,8 @@
 		67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3885F2B6C9B1B00EFF5C1 /* subamortiguado.swift */; };
 		67F7D3AA2B708B6500987072 /* ColorPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7D3A92B708B6500987072 /* ColorPlane.swift */; };
 		9F208A862B96020C007E6E4F /* wt_teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F208A852B96020C007E6E4F /* wt_teapot.obj */; };
+		9F82303C2BA1F3BD005DFF25 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82303B2BA1F3BD005DFF25 /* Triangle.swift */; };
+		9F82303E2BA1FCCF005DFF25 /* dataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82303D2BA1FCCF005DFF25 /* dataStructures.swift */; };
 		9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC015F2B9608A500A75C1B /* TealPodModel.swift */; };
 		9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */; };
 		9FAC01642B97556B00A75C1B /* teaPod.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FAC01632B97556B00A75C1B /* teaPod.metal */; };
@@ -42,6 +44,8 @@
 		9FBE655E2B9F6871002F71A1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE655D2B9F6871002F71A1 /* Node.swift */; };
 		9FBE65602B9F690B002F71A1 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE655F2B9F690B002F71A1 /* Plane.swift */; };
 		9FBE65622B9F6930002F71A1 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE65612B9F6930002F71A1 /* Scene.swift */; };
+		9FBE65642B9FFBF0002F71A1 /* scenexmple1.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE65632B9FFBF0002F71A1 /* scenexmple1.metal */; };
+		9FBE65662B9FFDEE002F71A1 /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE65652B9FFDEE002F71A1 /* Primitive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,8 @@
 		67A3885F2B6C9B1B00EFF5C1 /* subamortiguado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subamortiguado.swift; sourceTree = "<group>"; };
 		67F7D3A92B708B6500987072 /* ColorPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPlane.swift; sourceTree = "<group>"; };
 		9F208A852B96020C007E6E4F /* wt_teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wt_teapot.obj; sourceTree = "<group>"; };
+		9F82303B2BA1F3BD005DFF25 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		9F82303D2BA1FCCF005DFF25 /* dataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStructures.swift; sourceTree = "<group>"; };
 		9FAC015F2B9608A500A75C1B /* TealPodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TealPodModel.swift; sourceTree = "<group>"; };
 		9FAC01612B97531200A75C1B /* teaPodStrcutures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teaPodStrcutures.swift; sourceTree = "<group>"; };
 		9FAC01632B97556B00A75C1B /* teaPod.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = teaPod.metal; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 		9FBE655D2B9F6871002F71A1 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		9FBE655F2B9F690B002F71A1 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		9FBE65612B9F6930002F71A1 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		9FBE65632B9FFBF0002F71A1 /* scenexmple1.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = scenexmple1.metal; sourceTree = "<group>"; };
+		9FBE65652B9FFDEE002F71A1 /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +232,11 @@
 				9FBE655B2B9F6038002F71A1 /* planeRenderer.swift */,
 				9FBE655D2B9F6871002F71A1 /* Node.swift */,
 				9FBE655F2B9F690B002F71A1 /* Plane.swift */,
+				9FBE65652B9FFDEE002F71A1 /* Primitive.swift */,
 				9FBE65612B9F6930002F71A1 /* Scene.swift */,
+				9F82303B2BA1F3BD005DFF25 /* Triangle.swift */,
+				9FBE65632B9FFBF0002F71A1 /* scenexmple1.metal */,
+				9F82303D2BA1FCCF005DFF25 /* dataStructures.swift */,
 			);
 			path = video2e;
 			sourceTree = "<group>";
@@ -367,12 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				674CB4422B981303007A9747 /* TextureShaders.metal in Sources */,
+				9F82303C2BA1F3BD005DFF25 /* Triangle.swift in Sources */,
 				9FAC01722B9A527900A75C1B /* backgroundFilterModel.swift in Sources */,
 				9FAC01642B97556B00A75C1B /* teaPod.metal in Sources */,
 				673161122B69EA91004EC08A /* Shader.metal in Sources */,
 				9FB1AC282B92278C00244EE3 /* teaPodViewController.swift in Sources */,
 				67A3885E2B6C932000EFF5C1 /* trianguloCruculos.swift in Sources */,
 				9FBE655E2B9F6871002F71A1 /* Node.swift in Sources */,
+				9FBE65642B9FFBF0002F71A1 /* scenexmple1.metal in Sources */,
 				672F24242B6739930032D01B /* ViewController.swift in Sources */,
 				9FAC01742B9A52C000A75C1B /* Texturable.swift in Sources */,
 				9FBE655A2B9F5F85002F71A1 /* videoEViewController.swift in Sources */,
@@ -382,6 +396,7 @@
 				9FAC01602B9608A500A75C1B /* TealPodModel.swift in Sources */,
 				67A3885C2B6C897600EFF5C1 /* metaStructures.swift in Sources */,
 				9FBE655C2B9F6038002F71A1 /* planeRenderer.swift in Sources */,
+				9F82303E2BA1FCCF005DFF25 /* dataStructures.swift in Sources */,
 				672F24202B6739930032D01B /* AppDelegate.swift in Sources */,
 				674CB4402B9809EB007A9747 /* TextureModel.swift in Sources */,
 				67A388602B6C9B1B00EFF5C1 /* subamortiguado.swift in Sources */,
@@ -389,6 +404,7 @@
 				9FBE65622B9F6930002F71A1 /* Scene.swift in Sources */,
 				9FAC01622B97531200A75C1B /* teaPodStrcutures.swift in Sources */,
 				672F24222B6739930032D01B /* SceneDelegate.swift in Sources */,
+				9FBE65662B9FFDEE002F71A1 /* Primitive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

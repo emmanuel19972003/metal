@@ -54,7 +54,7 @@ class videoEViewController: UIViewController {
         
         metalView.clearColor = Colors.green
         
-        model = backgroundFilterModel(device: device, imageName: "greenScreen", background: "ladScape")
+        model = planeRenderer(device: device)
         
         metalView.delegate = model
     }

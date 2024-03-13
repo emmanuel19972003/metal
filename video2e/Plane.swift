@@ -7,44 +7,26 @@
 
 import MetalKit
 
-class Plane: Node {
+class Plane: Primitive {
     
-    let device: MTLDevice
-    let commandQueue: MTLCommandQueue
+    var scale: Float = 1.0
     
-     
-    var vertexBuffer: MTLBuffer?
-    var indexBuffer: MTLBuffer?
-    
-    init(device: MTLDevice, commandQueue: MTLCommandQueue) {
-        self.device = device
-        self.commandQueue = commandQueue
+    override func builObject() {
+        vertices = [
+            Vertex(position: SIMD3<Float>(-scale,scale,0),
+                   color: SIMD4<Float>(1,0,0,1)),
+            Vertex(position: SIMD3<Float>(-scale,-scale,0),
+                   color: SIMD4<Float>(0,1,0,1)),
+            Vertex(position: SIMD3<Float>(scale,-scale,0),
+                   color: SIMD4<Float>(0,0,1,1)),
+            Vertex(position: SIMD3<Float>(scale,scale,0),
+                   color: SIMD4<Float>(1,0,1,1))
+        ]
+        indices = [
+            0,1,2,
+            2,3,0
+        ]
     }
     
-    var vertices: [Vertex] = [
-        Vertex(position: SIMD3<Float>(-1,1,0),
-               color: SIMD4<Float>(1,0,0,1)),
-        Vertex(position: SIMD3<Float>(-1,-1,0),
-               color: SIMD4<Float>(0,1,0,1)),
-        Vertex(position: SIMD3<Float>(1,-1,0),
-               color: SIMD4<Float>(0,0,1,1)),
-        Vertex(position: SIMD3<Float>(1,1,0),
-               color: SIMD4<Float>(1,0,1,1))
-    ]
     
-    var indices: [UInt16] = [
-        0,1,2,
-        2,3,0
-    ]
-    
-    func buildModel() {
-        vertexBuffer = device.makeBuffer(bytes: vertices,
-                                         length: vertices.count *
-                                         MemoryLayout<Vertex>.stride,
-                                         options: [])
-        indexBuffer = device.makeBuffer(bytes: indices,
-                                         length: indices.count * MemoryLayout<UInt16>.size,
-                                         options: [])
-        
-    }
 }
