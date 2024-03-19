@@ -15,6 +15,8 @@ class Primitive: Node {
     var vertices: [Vertex]!
     var indices: [UInt16]!
     
+    var matrixConstants = MatrixConstants()
+    
     var pipeLineState: MTLRenderPipelineState?
     
     init(device: MTLDevice) {
@@ -40,8 +42,8 @@ class Primitive: Node {
     
     func buildPipeLineState(device: MTLDevice) {
         let lib = device.makeDefaultLibrary()
-        let vertexFunc = lib?.makeFunction(name: "vertex_shader_plane")
-        let fragmentFunc = lib?.makeFunction(name: "fragment_shader_plane")
+        let vertexFunc = lib?.makeFunction(name: "vertex_primitive")
+        let fragmentFunc = lib?.makeFunction(name: "fragment_primitive")
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunc
@@ -75,7 +77,12 @@ class Primitive: Node {
         commandEncoder.setRenderPipelineState(pipeLineState)
         super.render(commandEncoder: commandEncoder)
         guard let indexBuffer = indexBuffer else { return }
+        
         commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+        
+        commandEncoder.setVertexBytes(&matrixConstants,
+                                       length: MemoryLayout<MatrixConstants>.stride,
+                                       index: 1)
         
         commandEncoder.drawIndexedPrimitives(type: .triangle,
                                               indexCount: indices.count,
@@ -85,28 +92,21 @@ class Primitive: Node {
 
     }
     
-    func rotateX(degrees: Float) {
-        
+    func scale(by scaleFactor: Float) {
+        matrixConstants.scale = matrix_identity_float4x4.scaleMatrix(by: SIMD3<Float>(scaleFactor))
     }
     
-    func rotateY(degrees: Float) {
-        
+    func RoteZ(by rotateAngle: Float) {
+        matrixConstants.rotateZ = matrixConstants.rotateZ.rotateZ(by: Float.pi/100)
     }
     
-    func rotateZ(degrees: Float) {
-        
+    func RoteZAC(by rotateAngle: Float) {
+        matrixConstants.rotateZ = matrixConstants.rotateZ.rotateZ(by: -Float.pi/100)
     }
     
-    func moveX(_ x: Float) {
-        
+    func translate(by rotateAngle:  SIMD3<Float>) {
+        matrixConstants.translate = matrixConstants.translate.translation(by: rotateAngle)
     }
-    
-    func moveY(_ x: Float) {
-        
-    }
-    
-    func moveZ(_ x: Float) {
-        
-    }
+
     
 }

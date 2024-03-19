@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 //        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
 //        let homeView =  storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        let homeView = videoEViewController()
+        let homeView = GameControllerViewController()
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = homeView
         window?.makeKeyAndVisible()
